@@ -115,7 +115,7 @@ train.info()
 print("\n")
 
 # You want cluster the passenger records into 2: Survived or Not survived
-kmeans = KMeans(n_clusters=2)
+kmeans = kmeans = KMeans(n_clusters=2, max_iter=600, algorithm = 'auto')
 scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 kmeans.fit(X_scaled)
