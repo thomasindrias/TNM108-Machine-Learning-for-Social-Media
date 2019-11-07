@@ -36,11 +36,23 @@ y_test = test[:, n_pixels // 2:]
 
 # Fit estimators
 ESTIMATORS = {
-    "Extra trees": ExtraTreesRegressor(n_estimators=10, max_features=32,
+    "Trees": ExtraTreesRegressor(n_estimators=10, max_features=32,
                                        random_state=0),
-    "K-nn": KNeighborsRegressor(),
-    "Linear regression": LinearRegression(),
-    "Ridge": RidgeCV(),
+    "Trees (10, 50, 0)": ExtraTreesRegressor(n_estimators=10, max_features=50, max_depth=10,
+                                       random_state=0),
+    "Trees (20, 50, 0)": ExtraTreesRegressor(n_estimators=10, max_features=50, max_depth=20,
+                                       random_state=0),
+    "Trees (20, 25, 0)": ExtraTreesRegressor(n_estimators=10, max_features=25, max_depth=20,
+                                       random_state=0),
+    "Trees (10, 50, 1)": ExtraTreesRegressor(n_estimators=10, max_features=50, max_depth=10,
+                                       random_state=1),
+    "Trees (20, 50, 1)": ExtraTreesRegressor(n_estimators=10, max_features=50, max_depth=20,
+                                       random_state=1),
+    "Trees (20, 25, 1)": ExtraTreesRegressor(n_estimators=10, max_features=25, max_depth=20,
+                                       random_state=1),
+    # "K-nn": KNeighborsRegressor(),
+    # "Linear regression": LinearRegression(),
+    # "Ridge": RidgeCV(),
 }
 
 y_test_predict = dict()
