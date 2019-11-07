@@ -79,8 +79,8 @@ ex_variance = np.var(X_pca, axis=0)
 ex_variance_ratio = ex_variance/np.sum(ex_variance)
 print("Variance ratio\n", ex_variance_ratio)
 
-Xax = X_pca[:, 0]
-Yax = X_pca[:, 1]
+Xax = X_pca[:, 1]
+Yax = X_pca[:, 2]
 labels = cancer.target
 cdict = {0: 'red', 1: 'green'}
 labl = {0: 'Malignant', 1: 'Benign'}
@@ -93,8 +93,8 @@ for l in np.unique(labels):
     ax.scatter(Xax[ix], Yax[ix], c=cdict[l], s=40,
                label=labl[l], marker=marker[l], alpha=alpha[l])
 # for loop ends
-plt.xlabel("First Principal Component", fontsize=14)
-plt.ylabel("Second Principal Component", fontsize=14)
+plt.xlabel("Second Principal Component", fontsize=14)
+plt.ylabel("Third Principal Component", fontsize=14)
 plt.legend()
 plt.show()
 # please check the scatter plot of the remaining component and you will understand the difference
