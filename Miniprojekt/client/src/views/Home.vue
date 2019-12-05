@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="container">
+  <div class="row bg-primary half-box">
   </div>
+    <div class="row bg-primary half-box">
+  </div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+// import Ping from '../components/Ping.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
-    HelloWorld,
+    // Ping,
   },
 };
 </script>
+
+<style>
+.container {
+    height: 100%;
+}
+
+.blue-box{
+    height: 50vh;
+    padding: 0;
+}
+</style>
