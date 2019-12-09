@@ -1,6 +1,11 @@
 <template>
   <div class="card flex">
-
+    <div class="form-group">
+      <form class="input" method="post" @submit.prevent="submit">
+        <input type="text" name="name" value="value" v-model="name">
+        <button type="submit" class="btn btn-success btn-sm" name="button">Summarize it!</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -11,19 +16,32 @@ export default {
   name: 'Input',
   data() {
     return {
-      msg: '',
+      name: '',
     };
   },
   methods: {
     getMessage() {
       const path = 'http://localhost:5000/ping';
-      axios.get(path)
+      this.axios.get(path)
         .then((res) => {
+          // console.table(res.data);
           this.msg = res.data;
         })
         .catch((error) => {
           // eslint-disable-next-line
           console.error(error);
+        });
+    },
+    submit() {
+      const path = 'http://localhost:5000/ping';
+      this.axios.post(path, { name: this.name })
+        .then(({ data }) => {
+          // console.log(this.formValue);
+          this.$emit('created', data);
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.log(error);
         });
     },
   },
@@ -42,6 +60,7 @@ export default {
     overflow: hidden;
     width: 720px;
     max-width: 100%;
+    padding: 5vw;
     height: 360px;
 }
 </style>
