@@ -35,11 +35,12 @@
         class="hero is-info is-fullheight bg-image"
       />
 
-      <section class="section container-box">
+      <section class="container-box container columns text-left mx-auto pt-5">
         <hr />
         <div class="container columns is-fluid">
           <div class="content column is-three-fifths is-offset-one-fifth content-box content-text">
-            <vue-markdown>{{ markdown }}</vue-markdown>
+            <h1>Hej!</h1>
+            <p>heeeejejejj ajrjajjawje aj</p>
           </div>
         </div>
       </section>
@@ -48,26 +49,13 @@
 </template>
 
 <script>
-import moment from 'moment';
-import VueMarkdown from 'vue-markdown';
-import markdown from '../../README.md';
 
 export default {
-  filters: {
-    formatDate(value) {
-      return moment(String(value)).format('lll');
-    },
-  },
-  components: {
-    'vue-markdown': VueMarkdown,
-    markdown,
-  },
   data() {
     return {
       lazyLoad: false,
       shortName: 'flashcms',
       id: 'unique',
-      content: '```Hello <br> ',
       contentImageUrl: 'https://i.ytimg.com/vi/jpsGLsaZKS0/maxresdefault.jpg',
       avatar: 'https://liu.se/-/media/liu/2016/04/06/iStock_000009459009_Large.jpg?la=sv-se&w=640&hash=5B9826D18E1B93A7C3D6BE13FFA4786978A1A957',
     };
