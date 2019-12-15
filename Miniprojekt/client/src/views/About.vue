@@ -8,11 +8,6 @@
             <h1 class="title is-size-1 is-size-2-mobile">Machine Learning</h1>
             <hr />
             <div class="columns is-mobile is-vcentered">
-              <div
-                :style="{ backgroundImage: 'url(' +
-                avatar + ')' }"
-                class="avatar column is-narrow"
-              />
               <div class="column">
                 <p
                   class="is-size-4 is-size-5-mobile
@@ -39,8 +34,8 @@
         <hr />
         <div class="container columns is-fluid">
           <div class="content column is-three-fifths is-offset-one-fifth content-box content-text">
-            <h1>Hej!</h1>
-            <p>heeeejejejj ajrjajjawje aj</p>
+            <h1>Text Summarization using deep learning</h1>
+            <p>For this we followed a <a>tutorial</a> which used ... and ... type of dataset...</p>
           </div>
         </div>
       </section>
@@ -56,8 +51,7 @@ export default {
       lazyLoad: false,
       shortName: 'flashcms',
       id: 'unique',
-      contentImageUrl: 'https://i.ytimg.com/vi/jpsGLsaZKS0/maxresdefault.jpg',
-      avatar: 'https://liu.se/-/media/liu/2016/04/06/iStock_000009459009_Large.jpg?la=sv-se&w=640&hash=5B9826D18E1B93A7C3D6BE13FFA4786978A1A957',
+      contentImageUrl: 'https://images.idgesg.net/images/article/2018/01/emerging-tech_ai_machine-learning-100748222-large.jpg',
     };
   },
 };
