@@ -25,17 +25,17 @@ def receiveMessage():
         post_data = request.get_json()
 
         # printing result as string 
-        print(post_data['data'])
+        # print(post_data['data'])
         global inputData 
         inputData = post_data['data']
-        # DO ML STUFF
+        ML(inputData);
         
     else:
         print('error')
     return jsonify(response_object)
 
-def ML_stuff():
-    print("ML stuff")
+def ML(data):
+    print("ML function took in argument: " + data)
 
 # Send back summarization
 @app.route('/ping', methods=['GET'])
