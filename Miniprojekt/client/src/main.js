@@ -15,7 +15,6 @@ Vue.use(VueScrollReveal, {
   mobile: false,
 });
 Vue.use(bootstrapvue);
-
 Vue.config.productionTip = false;
 
 new Vue({

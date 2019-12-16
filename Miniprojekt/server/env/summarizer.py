@@ -125,10 +125,7 @@ class TextSummarizer(object):
         sequences = self.x_tokenizer.texts_to_sequences(cleaned_text)
         sequences = pad_sequences(sequences, maxlen=self.max_len_text, padding='post')
 
-        for i in range(len(texts)):
-            print("Review:", texts[i])
-            print("Predicted summary: ", self.decode_sequence(sequences[i]))
-            print("\n")
+        return self.decode_sequence(sequences[0])
 
     # Convert integer sequence to summary sequence
     def __seq2summary(self, input_seq):
