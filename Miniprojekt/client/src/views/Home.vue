@@ -4,17 +4,34 @@
   </div>
     <div class="row half-box">
   </div>
-  <Input class="card"/>
+  <b-card v-bind:title="!inputStatus ? 'Paste your text below!': 'Summarized!'"
+  class="card animated bounceInUp">
+  <Input v-if="!inputStatus" @submit="inputData"/>
+  <Output v-else @retry="inputData"/>
+  </b-card>
+
 </div>
 </template>
 
 <script>
 import Input from '../components/Input.vue';
+import Output from '../components/Output.vue';
 
 export default {
   name: 'Home',
   components: {
     Input,
+    Output,
+  },
+  data() {
+    return {
+      inputStatus: false,
+    };
+  },
+  methods: {
+    inputData(status) {
+      this.inputStatus = status;
+    },
   },
 };
 </script>

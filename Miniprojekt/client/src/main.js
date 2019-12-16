@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import 'animate.css';
 import VueScrollReveal from 'vue-scroll-reveal';
-
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Vue from 'vue';
+import bootstrapvue from 'bootstrap-vue';
 import App from './App.vue';
 import router from './router';
 
@@ -12,7 +14,7 @@ Vue.use(VueScrollReveal, {
   reset: true,
   mobile: false,
 });
-
+Vue.use(bootstrapvue);
 
 Vue.config.productionTip = false;
 

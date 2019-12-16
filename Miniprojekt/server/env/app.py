@@ -5,6 +5,9 @@ import json
 # configuration
 DEBUG = True
 
+#Data 
+inputData = None
+
 # instantiate the app
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -12,11 +15,8 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-
-# sanity check route
-@app.route('/ping', methods=['GET'])
-def ping_pong():
-    return jsonify('pong!')
+# def __init__(self):
+#         self.myname = "harry"
 
 @app.route('/ping', methods=['POST'])
 def receiveMessage():
@@ -25,13 +25,23 @@ def receiveMessage():
         post_data = request.get_json()
 
         # printing result as string 
-        print(post_data['data'])
+        # print(post_data['data'])
+        global inputData 
         inputData = post_data['data']
-
-        # DO ML STUFF
+        ML(inputData);
+        
     else:
         print('error')
     return jsonify(response_object)
+
+def ML(data):
+    print("ML function took in argument: " + data)
+
+# Send back summarization
+@app.route('/ping', methods=['GET'])
+def ping_pong():
+    global inputData
+    return jsonify(inputData)
 
 
 if __name__ == '__main__':

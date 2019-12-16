@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Summarizer</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -34,6 +34,7 @@
 <style>
 body {
   height: 100vh;
+  overflow: hidden;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -43,5 +44,6 @@ body {
   color: #2c3e50;
   height: 100%;
   padding: 0;
+
 }
 </style>
