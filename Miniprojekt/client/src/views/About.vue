@@ -40,9 +40,9 @@
             <p>Often when reading a report, you have to give a summary of the results which is common in and after college. However, this is a very time consuming task as you often have to read the whole article to understand the results. Until now, we can rely on the power of Natural Language Processing methods to summarize text for us.</p>
 <p>There are two types of approaches which can be used for text summarization.</p>
 <p>The first type is called Extractive Summarization. This approach identifies the most important sentences or phrases from the original text and extract only those from text&nbsp;as shown on the figure below. [1]</p>
-<p><img title="" src="/assets/images/image26.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image26.png" alt="" /></p>
 <p>However, our approach will be the second type, called Abstractive Summarization. Unlike Extractive summarization, we generate new sentences from the original text. [1]</p>
-<p><img title="" src="assets/images/image14.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image14.png" alt="" /></p>
 <p>The following is a walkthrough of how to use deep learning to create abstractive text summarization powered through python and vue. Pre-study was done using these tutorials:</p>
 <ul>
 <li><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2019/06/comprehensive-guide-text-summarization-using-deep-learning-python/&amp;sa=D&amp;ust=1576877610190000">Comprehensive Guide to Text Summarization using Deep Learning in Python</a></li>
@@ -50,7 +50,7 @@
 </ul>
 <p>We will mainly focus on the deep learning part and briefly explain how the client was built. Lastly we will try to answer our question in research:</p>
 <p>How can we generate abstract summaries of reviews of different genres e.g. food and books using deep learning?</p>
-<p><img title="" src="assets/images/image3.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image3.png" alt="" /></p>
 <h2>What is Flask?</h2>
 <p>As mentioned in <a href="https://www.google.com/url?q=https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/&amp;sa=D&amp;ust=1576877610192000">Developing a Single Page App with Flask and Vue.js</a>, Flask is a simple microweb framework for Python, meaning that it does not require particular tools or libraries. It&rsquo;s perfect for building RESTful APIs which can easily be used as a backend server for our frontend client.</p>
 <h2>What is Vue?</h2>
@@ -73,7 +73,7 @@
 <p>The first thing we need to do is create a Vue project. You can follow the steps specified on the Vue CLI documentation website:</p>
 <p><a href="https://www.google.com/url?q=https://cli.vuejs.org/guide/creating-a-project.html&amp;sa=D&amp;ust=1576877610195000">https://cli.vuejs.org/guide/creating-a-project.html</a></p>
 <p>This gives us a very basic website with some starting code. We can clean out most of this and instead customize it to our needs.</p>
-<p><img title="" src="assets/images/image17.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image17.png" alt="" /></p>
 <p>Create several folders under /src to structurize our project, such as:</p>
 <p>--/src/assets</p>
 <p>--/src/components</p>
@@ -148,11 +148,11 @@
 <p>}</p>
 <p>&lt;/style&gt;</p>
 <p>What we have got here is a very basic component which displays a basic header on the top.</p>
-<p><img title="" src="assets/images/image13.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image13.png" alt="" /></p>
 <p>This will be our starting point. Now let&rsquo;s create another component and put it in --/src/components/Input.vue</p>
 <p>This will handle all the text that the user inputs and send it to the server. It will consist of a</p>
 <p>a textarea, two radio buttons and a submit button.</p>
-<p><img title="" src="assets/images/image9.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image9.png" alt="" /></p>
 <p>Here is the code:</p>
 <p>&lt;template&gt;</p>
 <p>&lt;divclass="form-group shadow-textarea"&gt;</p>
@@ -419,10 +419,10 @@
 <p># Understand the format of the text</p>
 <p># Print 10 first reviews</p>
 <p>print(data[TEXT][:10])</p>
-<p><img title="" src="assets/images/image19.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image19.png" alt="" /></p>
 <p># Print 10 first summaries</p>
 <p>print(data[SUMMARY][:10])</p>
-<p><img title="" src="assets/images/image7.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image7.png" alt="" /></p>
 <p>We can see from these outputs that the texts contains contractions, punctuations and terms called stopwords. Typical stopwords are: a, an, and, any, are, as, it, its, just, these, they, this, to, we, was, were, etc. These words are shared between most documents and are not contributing to help distinguish between one document from another. The stopwords are imported from nltk.corpus. To import them you will first need to download them by typing the following code in a python terminal.</p>
 <p>import nltk</p>
 <p>nltk.download()</p>
@@ -518,7 +518,7 @@
 <p>print("Review: ", data['Text'][i])</p>
 <p>print("Summary: ", data['Summary'][i])</p>
 <p>print("\n")</p>
-<p><img title="" src="assets/images/image20.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image20.png" alt="" /></p>
 <h2>Analyzing the Data</h2>
 <p>In this phase, we will try to understand the approximate distribution of words for the reviews and summaries. This is important to know when we set the maximum length of the sequences. First we count the words in the texts, then we plot out the lengths of the texts in a histogram.</p>
 <p>import matplotlib.pyplot as plt</p>
@@ -535,7 +535,7 @@
 <p># Plot a histogram</p>
 <p>length_df.hist(bins = 30)</p>
 <p>plt.show()</p>
-<p><img title="" src="assets/images/image11.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image11.png" alt="" /></p>
 <p>From the histograms it is seen that the majority of summaries contains less than ten words; the reviews less than 80 words. Set these values as the maximum sequence lengths.</p>
 <p># From the histogram we learned that most reviews has the length 80 and summaries has length 10</p>
 <p>max_len_text = 80</p>
@@ -648,7 +648,7 @@
 <p>pyplot.plot(history.history['val_loss'], label='test')</p>
 <p>pyplot.legend()</p>
 <p>pyplot.show()</p>
-<p><img title="" src="assets/images/image8.jpg" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image8.jpg" alt="" /></p>
 <p>In this case the validation loss started to increase at epoch 10.</p>
 <h2>Inference Phase</h2>
 <p>Now it is time to set up the encoder and decoder to finally test our trained model.</p>
@@ -733,23 +733,23 @@
 <h2>Results and Discussion</h2>
 <p>We trained two separate models with the two data sets: food reviews and Kindle reviews with the presented python implementation. Below are a few example outputs from both data sets using the validation data.</p>
 <p>Kindle</p>
-<p><img title="" src="assets/images/image21.png" alt="" /></p>
-<p><img title="" src="assets/images/image23.png" alt="" /></p>
-<p><img title="" src="assets/images/image16.png" alt="" /></p>
-<p><img title="" src="assets/images/image12.png" alt="" /></p>
-<p><img title="" src="assets/images/image27.png" alt="" /></p>
-<p><img title="" src="assets/images/image2.png" alt="" /></p>
-<p><img title="" src="assets/images/image22.png" alt="" /></p>
-<p><img title="" src="assets/images/image4.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image21.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image23.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image16.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image12.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image27.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image2.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image22.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image4.png" alt="" /></p>
 <p>Food</p>
-<p><img title="" src="assets/images/image25.png" alt="" /></p>
-<p><img title="" src="assets/images/image24.png" alt="" /></p>
-<p><img title="" src="assets/images/image5.png" alt="" /></p>
-<p><img title="" src="assets/images/image10.png" alt="" /></p>
-<p><img title="" src="assets/images/image1.png" alt="" /></p>
-<p><img title="" src="assets/images/image6.png" alt="" /></p>
-<p><img title="" src="assets/images/image15.png" alt="" /></p>
-<p><img title="" src="assets/images/image18.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image25.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image24.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image5.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image10.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image1.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image6.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image15.png" alt="" /></p>
+<p class="text-center"><img title="" src="@/assets/images/image18.png" alt="" /></p>
 <p>Even though the predicted summary and original are not identical in most cases, they often have the same meaning. One problem is that the generated predictions can be quite repetitive but this is expected since a lot of human generated summaries are the same, and the vocabulary of the model is based on those summaries. Another observation is that, for the kindle data set, the predictions are biased in the way that they are very rarely negative. This is probably because of the lack of negative reviews in the data set.</p>
 <h2>References</h2>
 <p>[1] <a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2019/06/comprehensive-guide-text-summarization-using-deep-learning-python/&amp;sa=D&amp;ust=1576877610287000">https://www.analyticsvidhya.com/blog/2019/06/comprehensive-guide-text-summarization-using-deep-learning-python/</a></p>
@@ -793,6 +793,10 @@ $border-radius-size: 14px;
   box-sizing: border-box;
 }
 
+img {
+  width: 40vw;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -826,7 +830,4 @@ $border-radius-size: 14px;
   height: 500px;
 }
 
-img {
-  height: 300px;
-}
 </style>
