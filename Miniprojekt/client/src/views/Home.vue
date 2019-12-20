@@ -22,13 +22,13 @@
 
 <script>
 import Input from '../components/Input.vue';
-// import Output from '../components/Output.vue';
+import Output from '../components/Output.vue';
 
 export default {
   name: 'Home',
   components: {
     Input,
-    // Output,
+    Output,
   },
   data() {
     return {
