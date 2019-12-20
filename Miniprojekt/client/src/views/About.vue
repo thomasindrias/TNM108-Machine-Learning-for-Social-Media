@@ -75,10 +75,12 @@
 <p>This gives us a very basic website with some starting code. We can clean out most of this and instead customize it to our needs.</p>
 <p class="text-center"><img title="" src="@/assets/images/image17.png" alt="" /></p>
 <p>Create several folders under /src to structurize our project, such as:</p>
+<code>
 <p>--/src/assets</p>
 <p>--/src/components</p>
 <p>--/src/views</p>
 <p>--/src/router</p>
+</code>
 <p>Create a new .vue file named &ldquo;Home.vue&rdquo;. This will be our main view component.</p>
 <p>&lt;template&gt;</p>
 <p>&lt;divclass="container"&gt;</p>
@@ -319,7 +321,7 @@
 <p>app.run()</p>
 <p>We are now done on the server side and can start implementing the response of the summarization on the client side.</p>
 <p>To make things easy, let&rsquo;s create another Vue component named &ldquo;Output&rdquo; in</p>
-<p>-/src/components/Output.vue</p>
+<code><p>-/src/components/Output.vue</p></code>
 <p>&lt;template&gt;</p>
 <p>&lt;divclass="animated fadeIn"&gt;</p>
 <p>&lt;divclass="overflow-auto box"&gt;</p>
@@ -768,10 +770,11 @@
 <script src="https://gist.github.com/samuelllsvensson/464d2960b3a1a6c74186115d8c0e6612.js"></script>
 <script>
 import VueEmbedGist from 'vue-embed-gist';
-
+import VueMarkdown from 'vue-markdown';
 export default {
   components: {
     VueEmbedGist,
+    VueMarkdown,
   },
   data() {
     return {
