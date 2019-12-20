@@ -4844,6 +4844,11 @@ jest-worker@^24.9.0:
     merge-stream "^2.0.0"
     supports-color "^6.1.0"
 
+jquery@^3.3.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 js-base64@^2.1.8:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
@@ -8698,6 +8703,13 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
+
+vue-embed-gist@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vue-embed-gist/-/vue-embed-gist-1.0.2.tgz#92e27759769a0c15325f891a9050bd272d0eef48"
+  integrity sha512-qODOTTA933OfX9oLvfw3z4OmKtpZTHZ3mMv8bVU2GA+1WIBcN7TenR+riUjj8CiMtta/XpP01LnOjW6my72fbw==
+  dependencies:
+    jquery "^3.3.1"
 
 vue-eslint-parser@^5.0.0:
   version "5.0.0"

@@ -66,7 +66,7 @@ def init_summarizer (data_file_name):
 
 if __name__ == '__main__':
     # Name of the processed data
-    book = "Kindle_Reviews_Processed_100k"
+    book = "Kindle_Reviews_Processed_200k"
     food = "Food_Reviews_Processed_200k"
 
     # Initialize the summarizer with preloaded models and corresponding tokenizers

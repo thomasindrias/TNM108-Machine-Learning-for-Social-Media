@@ -44,8 +44,12 @@
 </template>
 
 <script>
+import VueEmbedGist from 'vue-embed-gist';
 
 export default {
+  components: {
+    VueEmbedGist,
+  },
   data() {
     return {
       lazyLoad: false,

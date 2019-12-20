@@ -52,8 +52,8 @@ export default {
     overflow: hidden;
     width: 720px;
     max-width: 100%;
-    padding: 5vw;
-    height: 360px;
+padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 .box{
