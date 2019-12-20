@@ -17,7 +17,7 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-@app.route('/ping', methods=['POST'])
+@app.route('/', methods=['POST'])
 def receiveMessage():
     response_object = {'status': 'success'}
     if request.method == 'POST':
@@ -49,7 +49,7 @@ def ML(data, typeOfSummarization):
     return predicted_data
 
 # Send back summarization
-@app.route('/ping', methods=['GET'])
+@app.route('/', methods=['GET'])
 def returnSummarization():
     global predicted_data
     return jsonify(predicted_data)

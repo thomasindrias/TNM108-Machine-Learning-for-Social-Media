@@ -1,6 +1,6 @@
 <template>
     <div class="form-group shadow-textarea">
-      <form class="input md-form mb-4 pink-textarea active-pink-textarea"
+      <form class="input md-form mb-2 pink-textarea active-pink-textarea"
           method="post" @submit.prevent="submit" >
         <label for="exampleFormControlTextarea6"
         class="text-danger animated shake delay-2s">{{ error }}</label>
@@ -53,20 +53,16 @@ export default {
 
     async submit() {
       this.error = '';
-
       // Check if text is long enough
       if (this.data.length < 10) {
         this.error = 'Enter a longer review.';
         return;
       }
-
       const path = 'http://localhost:5000/ping';
       let status = false;
       await axios.post(path, { data: this.data, data_type: this.data_type })
         // eslint-disable-next-line no-unused-vars
         .then((res) => {
-          // eslint-disable-next-line no-console
-          // console.log(this.data);
           status = true;
         })
         .catch((error) => {

@@ -29,10 +29,8 @@ export default {
       axios.get(path)
         .then((res) => {
           this.msg = res.data;
-          // console.log(res);
         })
         .catch((error) => {
-          // eslint-disable-next-line
           console.error(error);
         });
     },

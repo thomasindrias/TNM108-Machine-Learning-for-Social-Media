@@ -42,7 +42,7 @@
     </div>
   </div>
 </template>
-
+<script src="https://gist.github.com/samuelllsvensson/464d2960b3a1a6c74186115d8c0e6612.js"></script>
 <script>
 import VueEmbedGist from 'vue-embed-gist';
 
