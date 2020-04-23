@@ -6,7 +6,7 @@ __Dependencies__ <br>
 Make sure you download the training data and the nessecary packages using pip.
 
 The training data that was used can be found in our report:
-https://flashcms.netlify.com/creating-abstractive-text-summarization-using-deep-learning
+https://thomasindrias.com/creating-abstractive-text-summarization-using-deep-learning/
 
 ## Server
 Get started:
