@@ -14,7 +14,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.4.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "typeface-lato": "^0.0.75",
     "typeface-merriweather": "^0.0.72",
     "typeface-sree-krushnadevaraya": "^0.0.71",
